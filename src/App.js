@@ -3,7 +3,7 @@ import InstrumentShow from "./InstrumentShow";
 
 
 function getRandomInstrument() {
-  const instruments = ['guitar', 'piano', 'violin', 'drums', 'trumpet', 'saxaphone', 'flute', 'cello', 'clarinet', 'banjo', 'harmonica', 'ukulele', 'harp', 'percussion', 'trombone', 'bass']
+  const instruments = ['guitar', 'piano', 'violin', 'drums', 'saxophone']
 
   return instruments[Math.floor(Math.random() * instruments.length)];
 }
