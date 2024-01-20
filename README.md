@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Instrument Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Small, fun little program in React that can generate random images of musical instruments. Using this to brush up on my React skill.
 
 ## Available Scripts
 
