@@ -1,3 +1,4 @@
+import './App.css';
 import { useState } from "react";
 import InstrumentShow from "./InstrumentShow";
 
@@ -25,11 +26,11 @@ function App() {
 
   });
 
-  return <div>
+  return <div className="app">
     <h1>Random Instrument Generator:</h1>
-      <h2>Remove decision fatigue</h2>
+      <h2>Remove decision fatigue when it comes to picking a musical instrument.</h2>
       <button onClick={handleClick}>Add instrument</button>
-      <div>{renderedInstruments}</div>
+      <div className="instrument-list">{renderedInstruments}</div>
 
   </div>
   }
