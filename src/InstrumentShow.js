@@ -1,4 +1,5 @@
 import './InstrumentShow.css';
+import React from 'react';
 import { useState } from 'react'
 import guitar from './img/guitar.jpg' 
 import piano from './img/piano.jpg'
