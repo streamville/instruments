@@ -3,6 +3,8 @@ import React from 'react';
 import { useState } from "react";
 import InstrumentShow from "./InstrumentShow";
 import SearchBar from './components/SearchBar';
+import searchImages from './api';
+import ImageList from './components/ImageList';
 
 
 function getRandomInstrument() {
@@ -15,9 +17,11 @@ console.log(getRandomInstrument());
 
 function App() {
   const [instruments, setInstruments] = useState([]);
+  const [images, setImages] = useState([]);
 
-  const handleSubmit = (term) => {
-    console.log('Do a search with', term);
+  const handleSubmit = async (term) => {
+    const result = await searchImages(term);
+    setImages(result);
   };
 
   const handleClick = () => {
@@ -38,9 +42,9 @@ function App() {
     <h1>Random Instrument Generator:</h1>
       <h2>Remove decision fatigue when it comes to picking a musical instrument.</h2>
       <SearchBar onSubmit={handleSubmit} />
-      <button onClick={handleClick}>Add instrument</button>
+      <button onClick={handleClick}>Randomize</button>
+      <ImageList images={images} />
       <div className="instrument-list">{renderedInstruments}</div>
-
   </div>
   }
 
